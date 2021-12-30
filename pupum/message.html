@@ -1,0 +1,415 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>xd</title>
+<link href="css/bootstrap-4.4.1.css" rel="stylesheet" type="text/css">
+<script>var e = 0;
+  var upg = 0;
+  var upg2 = 0;
+  var upg3 = 0;
+  var upg4 = 0;
+  var upg5 = 0;
+  var upg6 = 0;
+  var clickval = 0;
+  var clickval1 = 0;
+  var clickval3 = 0;
+  var clickval4 = 0;
+  var clickval6 = 0;
+  var speed = 1010;
+  var cost = 10;
+  var cost2 = 100;
+  var cost3 = 1000;
+  var cost4 = 75;
+  var cost5 = 5000;
+  var cost6 = 10000;
+  
+  var buttonvalue = 1;
+  var hide = document.getElementById("hiddentest");
+  var cst2 = document.getElementById("cost2");
+  var up = document.getElementById("ultra");
+  var hide2 = document.getElementById("hide2");
+  var cst3 = document.getElementById("cost3");
+  var omgc = document.getElementById("omega");
+  var cst4 = document.getElementById("cost4");
+  var up4 = document.getElementById("buttonupgrade");
+  var hide3 = document.getElementById("hide3");
+  var hype = document.getElementById("hype");
+  var cst5 = document.getElementById("cost5");
+  /*------------------------------------------------*/
+  var hide4 = document.getElementById("hide4");
+  var nukc = document.getElementById("nukee");
+  var cst6 = document.getElementById("cost6");
+  var upgbuy2 = false;
+  var check = false;
+  var check1 = false;
+  var check3 = false;
+  var check4 = false;
+  var check6 = false;
+  var upgbuy3 = false;
+  var upgbuy4 = false;
+  var upgbuy6 = false;
+  var upgbuy = false;
+  var hiddenoof = false;
+  var mtl = "Nie ma nie za darmo ";
+  function codeinput() {
+      avariable = prompt("A hasło?? nie ma tak łatwo");
+      if (avariable === "Pumatokoks") {
+          inpt2 = prompt("Ile ci walnac?");
+          e += parseInt(inpt2);
+          updac();
+      }
+  }
+  
+  hide2.style.visibility = 'hidden';
+  hide3.style.visibility = 'hidden';
+  hide4.style.visibility = 'hidden';
+  
+  
+  
+  function click() {
+      e = e + clickval1;
+      updac();
+  }
+  function click1() {
+      e = e + clickval;
+      updac();
+  }
+  function click3() {
+      e = e + clickval3;
+      updac();
+  }
+  function click4() {
+      e += clickval4;
+      updac();
+  }
+  function click6() {
+      e += clickval6;
+      updac();
+  }
+  hide.style.visibility = 'hidden';
+  
+  
+  function myfunction() {
+      e = e + buttonvalue;
+      document.getElementById("var").innerHTML = "kilk: " + e;
+      if (e >= 100) {
+         hide.style.visibility = 'visible';
+      }
+      if (e >= 1000) {
+          hide2.style.visibility = 'visible';
+      }
+      
+      if (e >= 5000) {
+          hide3.style.visibility = 'visible';
+      }
+  
+      if (e >= 10000) {
+          hide4.style.visibility = 'visible';
+      }
+         
+         
+      
+  }
+  
+  function updac() {
+      document.getElementById("var").innerHTML = "klik: " + e;
+  }
+  
+  function buyupgrade() {
+      if (e >= cost) {
+          upg = upg + 1;
+          e = e - cost;
+          cost = cost + 5;
+          upgbuy = true;
+          clickval = clickval + 1;
+          document.getElementById("upgrade").innerHTML = " Kujon Puma: " + upg;
+          document.getElementById("cost").innerHTML = "Dawaj hajs: " + cost;
+          updac();
+          
+          if (check1 === false) {
+              if (upgbuy === true) {
+                  setInterval(click1, 2000);
+                  check1 = true;
+                  
+              }
+          }
+              
+          
+      } else {
+          alert(mtl+"\"auto clicker\"!");
+      }
+  }
+  
+  function buyupgrade1() {
+      if (e >= cost2) {
+          upg2 = upg2 + 1;
+          e = e - cost2;
+          cost2 = cost2 + 50;
+          clickval1 = clickval1 + 1;
+          upgbuy2 = true;
+          cst2.innerHTML = "Dawaj hajs: " + cost2;
+          up.innerHTML = "ultra clickers: " + upg2;
+          updac();
+          if (check === false) {
+              if (upgbuy2 === true) {
+                  
+                  setInterval(click, 1000);
+                  check = true;
+              }
+          }
+      } else {
+          alert(mtl+"\"ultra clicker\"!");
+      }
+  }
+  
+  function buyupgrade3() {
+      if (e >= cost3) {
+          upg3 = upg3 + 1;
+          e = e - cost3;
+          cost3 = cost3 + 500;
+          clickval3 = clickval3 + 1;
+          upgbuy3 = true;
+          cst3.innerHTML = "Dawaj hajs: " + cost3;
+          omgc.innerHTML = "omega clickers: " + upg3;
+          updac();
+          if (check3 === false) {
+              if (upgbuy3 === true) {
+                  setInterval(click3, 100);
+                  check3 = true;
+              }
+          }
+      } else {
+          alert(mtl + "\"omega clicker\"!")
+      }
+  }
+  
+  function upgradeclick() {
+      if (e >= cost4) {
+          e = e - cost4;
+          upg4 = upg4 + 1;
+          buttonvalue = buttonvalue + 1;
+          cost4 = cost4 + 25;
+          updac();
+          up4.innerHTML = "Sznela Sznela: " + upg4;
+          cst4.innerHTML = "Dawaj hajs: " + cost4;
+      } else {
+          alert(mtl + "\"button upgrade\"!");
+      }
+  }
+  
+  function buyupgrade4() {
+      if (e >= cost5) {
+          e -= cost5;
+          upg5 += 1;
+          cost5 += 1000;
+          upgbuy4 = true;
+          clickval4 += 1;
+          hype.innerText = "hyper clickers: "+ upg5;
+          cst5.innerText = "Dawaj hajs: " + cost5;
+          updac();
+          if (check4 === false) {
+              if (upgbuy4 === true) {
+                  setInterval(click4, 10);
+                  check4 = true;
+              }
+          }
+          
+          
+      } else {
+          alert(mtl + "\"hyper clicker\"!");
+      }
+  }
+  
+  function buynuk() {
+      if (e >= cost6) {
+          e -= cost6;
+          upg6 += 1;
+          cost6 += 5000;
+          upgbuy6 = true;
+          clickval6 += 2;
+          nukc.innerText = "nuclear clickers: " + upg6;
+          cst6.innerText = "Dawaj hajs: " + cost6;
+          updac();
+          if (check6 === false) {
+              if (upgbuy6 === true) {
+                  setInterval(click6, 0.1);
+                  check6 = true;
+              }
+          }
+      } else {
+          alert(mtl + "\"nuclear clicker\"!")
+      }
+  }</script>
+</head>
+
+<body>
+<script src="js/jquery-3.4.1.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap-4.4.1.js"></script>
+<main>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary"> <a class="navbar-brand" href="#">PUMPOP</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent1" aria-controls="navbarSupportedContent1" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span></button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent1">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active"> <a class="nav-link" href="#">Klikacz <span class="sr-only">(current)</span></a></li>
+        <li class="nav-item"> <a class="nav-link" href="#">Ulepszenia</a></li>
+        <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Lista </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown1"> <a class="dropdown-item" href="#">AKCJA</a> <a class="dropdown-item" href="#">INNA ACKJA</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">COS TU BEDZIE</a></div>
+        </li>
+        <li class="nav-item"> <a class="nav-link disabled" href="#">Wylaczone</a></li>
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Szukaj" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Szukaj</button>
+      </form>
+    </div>
+  </nav>
+  <div class="jumbotron bg-light border-danger">
+    <h1 class="display-4">Witaj w PUMPOPIE!</h1>
+    <p class="lead">To jest prosty program polegajacy na klikaniu w wu.</p>
+    <hr class="my-4">
+    <p>Chcesz nauczyc sie wiecej o PUMPOPIE kliknij w przycisk poniżej.</p>
+    <p class="lead"> <a class="btn btn-primary btn-lg" href="#" role="button">Chce wiedzieć więcej</a></p>
+  </div>
+  <div class="card text-center col-md-12">
+    <div class="card-header"> Klikacz&nbsp; </div>
+    <div class="card-body">
+      <h5 class="card-title">Klikaj ponizej zeby zdobyc wuwu</h5>
+
+
+      <div class="con">
+        <div onclick="codeinput()" class="codebox"></div>
+
+        <center>
+        <div class="texty" style="font-size: 20px" id="var">Pumek: 0</div>
+
+        </center></div>
+
+      <p class="card-text"><img src="C:\Users\Admin\Desktop\pupum/wu.png" class="img-fluid rounded box" onclick="myfunction()" alt="Placeholder image"></p>
+      <a href="#" class="btn btn-primary">Poniżej masz ulepsznia</a></div>
+    <div class="card-footer text-muted"> &nbsp; </div>
+  </div>
+	
+  <div id="carouselExampleIndicators1" class="carousel slide bg-light" data-ride="carousel" style="background-color: grey">
+	  <ol class="carousel-indicators">
+	    <li data-target="#carouselExampleIndicators1" data-slide-to="0" class="active"></li>
+	    <li data-target="#carouselExampleIndicators1" data-slide-to="1"></li>
+	    <li data-target="#carouselExampleIndicators1" data-slide-to="2"></li>
+    </ol>
+	  <div class="carousel-inner " role="listbox">
+	    <div class="carousel-item active"> <img class="d-block mx-auto" src="C:\Users\Admin\Desktop\pupum/zubr.png" alt="First slide">
+	      <div class="carousel-caption">
+	        <h5>wu z zubrem</h5>
+	        <p>🇭 🇴 🇹</p>
+        </p>
+          </div>
+        </div>
+	    <div class="carousel-item"> <img class="d-block mx-auto" src="C:\Users\Admin\Desktop\pupum/wuwu.png" alt="Second slide">
+	      <div class="carousel-caption">
+	        <h5>wu po 3 zubrowkach </h5>
+	        <p>🇭 🇴 🇹</p>
+          </div>
+        </div>
+	    <div class="carousel-item"> <img class="d-block mx-auto" src="C:\Users\Admin\Desktop\pupum/aw.png" alt="Third slide">
+	      <div class="carousel-caption">
+	        <h5>wu hotwua</h5>
+	        <p>🇭 🇴 🇹</p>
+          </div>
+        </div>
+    </div>
+	  <a class="carousel-control-prev" href="#carouselExampleIndicators1" role="button" data-slide="prev"> <span class="carousel-control-prev-icon bg-dark" aria-hidden="true"></span> <span class="sr-only">Poprzedni</span> </a> <a class="carousel-control-next" href="#carouselExampleIndicators1" role="button" data-slide="next"> <span class="carousel-control-next-icon bg-dark" aria-hidden="true"></span> <span class="sr-only">Nastepne</span> </a> </div>
+<div class="jumbotron bg-light">
+    <h1 class="display-4">Ulepszenia!</h1>
+    <p class="lead">Ulepszenia pozwalaja ci ulepszyc klikanie a nawet afkowanie!</p>
+    <hr class="my-4">
+    
+    <div class="container-fluid">
+      <ul id="clothingnav1" class="nav nav-tabs" role="tablist">
+        <li class="nav-item"> <a class="nav-link active inline" href="#home1" id="hometab1" role="tab" data-toggle="tab" aria-controls="home" aria-expanded="true" id="upgrade">AFK 1</a> </li>
+        <li class="nav-item"> <a class="nav-link" href="#paneTwo1" role="tab" id="hatstab1" data-toggle="tab" aria-controls="hats">Szybkosc Klikania</a> </li>
+       
+        <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"> Ulepszenia </a>
+          <div class="dropdown-menu"> <a class="dropdown-item" href="#tabDropDownOne1" role="tab" id="dropdownshoestab1" data-toggle="tab" aria-controls="dropdownShoes">Ulepszenie hypo 1</a> <a class="dropdown-item" href="#tabDropDownTwo1" role="tab" id="dropdownbootstab1" data-toggle="tab" aria-controls="dropdownBoots">Ulepszenia NUCLEAR 2</a>
+            <a class="dropdown-item" href="#tabDropDownOne2" role="tab" id="dropdownshoestab1" data-toggle="tab" aria-controls="dropdownShoes">Ulepszenie omega 1</a>
+            <a class="dropdown-item" href="#tabDropDownOne3" role="tab" id="dropdownshoestab1" data-toggle="tab" aria-controls="dropdownShoes">Ulepszenie delta 1</a>
+          
+          </div>
+        </li>
+      </ul>
+
+      <div id="clothingnavcontent1" class="tab-content">
+        <div role="tabpanel" class="tab-pane fade show active" id="home1" aria-labelledby="hometab1">
+          <p class="lead"><a class="btn btn-primary btn-lg buybox inline" href="#" role="button" onclick="buyupgrade()"></a></p>
+            <div class="inline" id="upgrade">Kujon puma: 0</div>
+            <div id="cost">Dawaj hajs: 10</div>
+           <br></p>
+        </div>
+        <div role="tabpanel" class="tab-pane fade" id="paneTwo1" aria-labelledby="hatstab1">
+          <p><button class="btn btn-primary btn-lg buybox inline" onclick="upgradeclick()"></button>
+            <div class="inline" id="buttonupgrade">Sznela Sznela: 0</div>
+            <div id="cost4">Dawaj hajs: 75</div>
+            <br></p>
+        </div>
+        <div role="tabpanel" class="tab-pane fade" id="tabDropDownOne1" aria-labelledby="dropdownshoestab1">
+          <p><div id="hiddentest">
+            <button class="btn btn-primary btn-lg buybox inline" onclick="buyupgrade1()"></button>
+            <div id="ultra" class="inline">ultra clickers: 0</div>
+            <div id="cost2">Dawaj hajs: 100</div>
+            <br>
+        </div></p>
+        </div>
+        <div role="tabpanel" class="tab-pane fade" id="tabDropDownTwo1" aria-labelledby="dropdownbootstab1">
+          <p><div id="hide2">
+            <button class="btn btn-primary btn-lg buybox inline" onclick="buyupgrade3()"></button>
+            <div id="omega" class="inline">omega clickers: 0</div>
+            <div id="cost3">Dawaj hajs: 1000</div>
+            <br>
+        </div></p>
+        </div>
+        <div role="tabpanel" class="tab-pane fade" id="tabDropDownOne2" aria-labelledby="dropdownbootstab1">
+          <p><div id="hide3">
+            <button class="btn btn-primary btn-lg buybox inline" onclick="buyupgrade4()"></button>
+            <div id="hype" class="inline">hyper clickers: 0</div>
+            <div id="cost5">Dawaj hajs: 5000</div>
+            <br>
+            
+        </div></p>
+        </div>
+        <div role="tabpanel" class="tab-pane fade" id="tabDropDownOne3" aria-labelledby="dropdownbootstab1">
+          <p><div id="hide4">
+            <button onclick="buynuk()" class="btn btn-primary btn-lg buybox inline"></button>
+            <div class="inline" id="nukee">nuclear clickers: 0</div>
+            <div id="cost6">Dawaj hajs: 10000</div>
+        </div></p>
+        </div>
+      </div>
+    </div>
+<p class="lead"> <a class="btn btn-primary btn-lg" href="#" role="button">Dowiedz sie wiecej</a> </p>
+  </div>
+</main>
+<footer>
+	<h1>Dostań się do naszej firmy!</h1>
+  <form>
+    <div class="form-group">
+      <label for="exampleInputEmail1">Email address</label>
+      <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+      <small id="emailHelp1" class="form-text text-muted">Nie zapisujemy danych hehehhehe</small> </div>
+      <small id="emailHelp1" class="form-text text-muted">pss to ja wu *aka wuwu* wszystko co tu wpiszesz ma zapisane :))</small> </div>
+    <div class="form-group">
+      <label for="exampleInputPassword1">Haslo</label>
+      <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Haslo">
+    </div>
+    <div class="form-check">
+      <input type="checkbox" class="form-check-input" id="exampleCheck1">
+      <label class="form-check-label" for="exampleCheck1">Sprawdz mnie</label>
+    </div>
+    <button type="submit" class="btn btn-primary">Akceptuj</button>
+  </form>
+</footer>
+</body>
+</html>
